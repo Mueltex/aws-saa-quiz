@@ -1,0 +1,17 @@
+# Normalize line endings to LF on commit, checkout as-is on Windows
+* text=auto
+
+# Force LF for these file types regardless of OS
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
+
+# Treat binaries as binary (no conversion)
+*.png  binary
+*.ico  binary
+*.woff2 binary

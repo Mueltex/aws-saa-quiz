@@ -1,0 +1,131 @@
+{
+  "sets": [
+    {
+      "id": "set-01-resilient-architectures",
+      "domain": "Resilient Architectures",
+      "targetCount": 65,
+      "topics": [
+        "Multi-AZ vs Multi-Region tradeoffs",
+        "ALB vs NLB: when to use each",
+        "Auto Scaling groups: policies, cooldown, lifecycle hooks",
+        "Route 53 routing policies: failover, latency, weighted, geolocation",
+        "RDS Multi-AZ vs Read Replicas",
+        "Aurora Global Database",
+        "S3 versioning and cross-region replication",
+        "SQS and SNS for decoupled architectures",
+        "ElastiCache Redis vs Memcached: HA patterns",
+        "DynamoDB Global Tables",
+        "EFS for shared storage across AZs"
+      ]
+    },
+    {
+      "id": "set-02-secure-architectures",
+      "domain": "Secure Architectures",
+      "targetCount": 65,
+      "topics": [
+        "IAM policies: identity vs resource-based",
+        "IAM roles vs users: when to use each",
+        "STS AssumeRole and cross-account access",
+        "Service Control Policies (SCPs) in AWS Organizations",
+        "VPC security groups vs NACLs: key differences",
+        "VPC endpoints: Gateway vs Interface",
+        "AWS PrivateLink",
+        "KMS key policies and key rotation",
+        "Secrets Manager vs SSM Parameter Store",
+        "AWS Certificate Manager (ACM)",
+        "AWS WAF and Shield: DDoS layers",
+        "Amazon Cognito: user pools vs identity pools",
+        "Amazon Inspector and GuardDuty: when to use each",
+        "S3 bucket policies, ACLs, and Object Lock"
+      ]
+    },
+    {
+      "id": "set-03-high-performing-architectures",
+      "domain": "High-Performing Architectures",
+      "targetCount": 65,
+      "topics": [
+        "EC2 instance families: compute vs memory vs storage optimized",
+        "EC2 placement groups: cluster, spread, partition",
+        "ECS vs EKS vs Fargate: choosing the right container service",
+        "Lambda: concurrency, reserved concurrency, provisioned concurrency",
+        "Lambda: event sources, destinations, layers",
+        "API Gateway: REST vs HTTP vs WebSocket",
+        "DynamoDB: GSIs, LSIs, DAX caching",
+        "Aurora Serverless v2 use cases",
+        "ElastiCache caching strategies: lazy loading vs write-through",
+        "CloudFront: origins, behaviors, OAC, signed URLs",
+        "Global Accelerator vs CloudFront: when to use each",
+        "Kinesis Data Streams vs SQS: choosing the right queue",
+        "Kinesis Data Firehose: delivery and transformation"
+      ]
+    },
+    {
+      "id": "set-04-cost-optimized-architectures",
+      "domain": "Cost-Optimized Architectures",
+      "targetCount": 65,
+      "topics": [
+        "EC2 On-Demand vs Reserved vs Spot vs Savings Plans",
+        "Spot Instances: interruption handling, use cases",
+        "S3 storage classes: choosing the right tier",
+        "S3 Lifecycle policies: transitions and expiration",
+        "EBS volume types: gp3 vs io2 vs st1 vs sc1",
+        "Serverless cost model: Lambda vs EC2 for variable workloads",
+        "NAT Gateway costs and alternatives",
+        "Data transfer costs: cross-AZ, cross-region, internet",
+        "AWS Trusted Advisor cost recommendations",
+        "AWS Cost Explorer and Budgets",
+        "Compute Optimizer recommendations",
+        "Rightsizing EC2 instances"
+      ]
+    },
+    {
+      "id": "set-05-storage-and-databases",
+      "domain": "Resilient Architectures",
+      "targetCount": 65,
+      "topics": [
+        "S3 advanced: MFA Delete, Object Lock (WORM), Requester Pays",
+        "S3 Intelligent-Tiering: when it saves money",
+        "EFS: performance modes, throughput modes, storage classes",
+        "EBS vs EFS vs Instance Store: choosing per workload",
+        "AWS Storage Gateway: File, Volume, Tape",
+        "AWS Snow family: Snowcone, Snowball, Snowmobile",
+        "RDS: backup and restore, point-in-time recovery",
+        "RDS Proxy: connection pooling use cases",
+        "DynamoDB: streams, TTL, backup/restore",
+        "Amazon Redshift: distribution styles, Spectrum",
+        "Amazon Athena: querying S3 with SQL",
+        "Amazon OpenSearch Service use cases"
+      ]
+    },
+    {
+      "id": "set-06-networking-and-connectivity",
+      "domain": "Resilient Architectures",
+      "targetCount": 65,
+      "topics": [
+        "VPC design: subnets, CIDR, AZ placement",
+        "VPC Peering vs Transit Gateway: scalability comparison",
+        "Direct Connect vs Site-to-Site VPN: latency and reliability",
+        "Direct Connect Gateway: multi-region access",
+        "Route 53 advanced: health checks, ALIAS records, private zones",
+        "ALB: content-based routing, listener rules, target groups",
+        "NLB: static IPs, UDP support, TLS passthrough",
+        "Egress-only Internet Gateway for IPv6",
+        "VPC Flow Logs: troubleshooting connectivity",
+        "AWS Transit Gateway: hub-and-spoke networking",
+        "CloudFront with custom origins and signed cookies"
+      ]
+    },
+    {
+      "id": "set-07-exam-simulation-1",
+      "domain": "Mixed",
+      "targetCount": 65,
+      "topics": ["mixed — pull questions proportionally from all 4 domains"]
+    },
+    {
+      "id": "set-08-exam-simulation-2",
+      "domain": "Mixed",
+      "targetCount": 65,
+      "topics": ["mixed — pull questions proportionally from all 4 domains"]
+    }
+  ]
+}

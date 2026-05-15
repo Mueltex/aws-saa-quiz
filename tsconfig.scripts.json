@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["ES2022"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "outDir": "./dist-scripts",
+    "rootDir": ".",
+    "resolveJsonModule": true
+  },
+  "include": ["scripts/**/*.ts", "src/types/**/*.ts"]
+}
