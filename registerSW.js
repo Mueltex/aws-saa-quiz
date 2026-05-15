@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/aws-saa-quiz/sw.js', { scope: '/aws-saa-quiz/' })})}
