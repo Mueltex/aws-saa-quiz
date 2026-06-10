@@ -55,7 +55,7 @@ export default function App() {
     setActive({ setId, mode })
     setScreen('quiz')
     const questions = await loadQuestionsForSet(setId)
-    await loadQuestions(questions)
+    await loadQuestions(questions, mode)
   }, [loadQuestions])
 
   const handlePracticeWeak = useCallback(async () => {

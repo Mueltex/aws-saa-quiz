@@ -35,14 +35,15 @@ export function useQuiz(setId: string, mode: QuizMode) {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   const loadQuestions = useCallback(
-    async (allQuestions: Question[]) => {
+    async (allQuestions: Question[], explicitMode?: QuizMode) => {
+      const m = explicitMode ?? mode
       let ordered = allQuestions.filter((q) => q.verified)
 
-      if (mode === 'random' || mode === 'exam-sim' || mode === 'pack') {
+      if (m === 'random' || m === 'exam-sim' || m === 'pack') {
         ordered = [...ordered].sort(() => Math.random() - 0.5)
-        if (mode === 'exam-sim') ordered = ordered.slice(0, 65)
-        if (mode === 'pack') ordered = ordered.slice(0, 15)
-      } else if (mode === 'weak-first') {
+        if (m === 'exam-sim') ordered = ordered.slice(0, 65)
+        if (m === 'pack') ordered = ordered.slice(0, 15)
+      } else if (m === 'weak-first') {
         const weakIds = await getWeakQuestionIds(20)
         const weakSet = new Set(weakIds)
         const weak = ordered.filter((q) => weakSet.has(q.id))
@@ -62,11 +63,11 @@ export function useQuiz(setId: string, mode: QuizMode) {
         sessionId: uuid(),
         startTime: now,
         questionStartTime: now,
-        examTimeLeft: mode === 'exam-sim' ? EXAM_DURATION_SECONDS : null,
+        examTimeLeft: m === 'exam-sim' ? EXAM_DURATION_SECONDS : null,
         flagged: new Set(),
       }))
 
-      if (mode === 'exam-sim') {
+      if (m === 'exam-sim') {
         timerRef.current = setInterval(() => {
           setState((prev) => {
             if (prev.examTimeLeft === null || prev.examTimeLeft <= 0) {
