@@ -38,9 +38,10 @@ export function useQuiz(setId: string, mode: QuizMode) {
     async (allQuestions: Question[]) => {
       let ordered = allQuestions.filter((q) => q.verified)
 
-      if (mode === 'random' || mode === 'exam-sim') {
+      if (mode === 'random' || mode === 'exam-sim' || mode === 'pack') {
         ordered = [...ordered].sort(() => Math.random() - 0.5)
         if (mode === 'exam-sim') ordered = ordered.slice(0, 65)
+        if (mode === 'pack') ordered = ordered.slice(0, 15)
       } else if (mode === 'weak-first') {
         const weakIds = await getWeakQuestionIds(20)
         const weakSet = new Set(weakIds)

@@ -171,6 +171,12 @@ export default function App() {
               </div>
             )}
 
+            {active.mode === 'pack' && (
+              <div className="rounded-xl border border-amber-900 bg-amber-950 p-4 text-sm text-amber-300">
+                Pack complete! Hit <strong>Retry</strong> for a fresh 15-question mix, or go back to pick another set.
+              </div>
+            )}
+
             <div className="flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => startQuiz(active.setId, active.mode)}

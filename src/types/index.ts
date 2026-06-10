@@ -73,6 +73,7 @@ export type QuizMode =
   | 'random'
   | 'weak-first'
   | 'exam-sim'
+  | 'pack'
 
 export interface DomainStat {
   domain: ExamDomain

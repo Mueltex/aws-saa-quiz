@@ -51,17 +51,18 @@ export function SetList({ sets, progress, onStart }: SetListProps) {
 
             <div className="flex gap-2">
               <button
-                onClick={() => onStart(set.id, 'random')}
+                onClick={() => onStart(set.id, 'pack')}
                 className="flex-1 rounded-xl bg-amber-400 py-3 text-sm font-bold text-gray-950 transition-all active:scale-[0.98]"
+                title="Quick pack — 15 random questions"
               >
-                {hasProgress ? 'Continue' : 'Start'}
+                Pack · 15
               </button>
               <button
-                onClick={() => onStart(set.id, 'sequential')}
+                onClick={() => onStart(set.id, 'random')}
                 className="rounded-xl border border-gray-700 px-3 py-3 text-xs text-gray-400 hover:border-gray-500 hover:text-gray-200"
-                title="Sequential order"
+                title="All questions, random order"
               >
-                1→
+                All
               </button>
             </div>
           </div>
